@@ -41,6 +41,18 @@ It sets up a single Virtual Private Server (VPS) and configures essential firewa
     terraform destroy
     ```
 
+## 🖼️ Screenshots
+
+### 1. Terraform `apply` Output
+*Confirmation of successful VPS and firewall provisioning from the terminal.*
+
+![Terraform Apply Output](screenshots/terraform.png)
+
+### 2. Vultr Dashboard - Newly Provisioned VPS
+*Verify the instance details and status directly from the Vultr control panel.*
+
+![Vultr VPS Details](screenshots/vultr_dashboard.png)
+
 ## ⚠️ Important Notes:
 
 * **Security:** Never hardcode your API key directly into your `main.tf` or commit it to version control. Use environment variables as shown.
