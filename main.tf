@@ -34,9 +34,9 @@ resource "vultr_firewall_rule" "http" {
 }
 
 resource "vultr_instance" "vm" {
-  region   = "ams"               # Singapore region
+  region   = "ams"               # Ams region
   plan     = "vc2-1c-1gb"        # 1 CPU, 1GB RAM
-  os_id    = 2284                 # Ubuntu 22.04
+  os_id    = 2284                 # Ubuntu 24.04
   label    = "terraform-demo"
   hostname = "terraform-demo"
   backups = "disabled"
