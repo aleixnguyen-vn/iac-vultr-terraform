@@ -39,12 +39,13 @@ resource "vultr_firewall_rule" "http" {
 }
 
 resource "vultr_instance" "vm" {
-  region   = "sgp"               # Singapore region
+  region   = "ams"               # Singapore region
   plan     = "vc2-1c-1gb"        # 1 CPU, 1GB RAM
-  os_id    = 1743                 # Ubuntu 24.04
-  
-  user_data = file("init-script.sh") # basic server setup
-  ssh_key_ids = [vultr_ssh_key.mykey.id]
+  os_id    = 2284                 # Ubuntu 22.04
+
+
+  user_data = file("init-script.sh") # server provisioning script
+  ssh_key_ids = [vultr_ssh_key.mykey.id] # attach ssh key
 
   label    = "terraform-demo"
   hostname = "terraform-demo"
